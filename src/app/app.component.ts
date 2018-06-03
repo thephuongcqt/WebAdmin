@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Http } from '@angular/http';
+import { Observable } from 'rxjs';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  loadFeature = 'clinic';
+  onNavigate(feature: string) {
+    this.loadFeature = feature;
+  }
 }
